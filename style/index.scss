@@ -1,0 +1,75 @@
+// Base css
+@import "base/clear.scss";
+
+// Dependencies
+@import "dependencies/bootstrap";
+@import "dependencies/leaflet.scss";
+
+// ------- Project ------- //
+@import "base/typography.scss";
+@import "variables";
+// Sections
+@import "sections/header.scss";
+@import "sections/footer.scss";
+
+
+
+div.tooltip { 
+	z-index: 100;
+    position: absolute;
+    width: 180px; 
+    line-height: 1px;        
+    height: 80px;         
+    padding: 8px;
+    padding-left: 12px;      
+    font: 12px sans-serif;    
+    background: rgba(50, 50, 50, 0.85); 
+    color: #f2f2f2;
+    border: 0px;    
+    border-radius: 2px;     
+    pointer-events: none;
+}
+
+br {
+   display: block;
+   margin: 10px 0;
+   content: " "; 
+}
+
+.title {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+rect.bordered {
+stroke: #E6E6E6;
+stroke-width:2px;   
+}
+
+text.mono {
+font-size: 9pt;
+font-family: Consolas, courier;
+fill: #aaa;
+}
+
+text.axis-workweek {
+fill: #000;
+}
+
+text.axis-worktime {
+fill: #000;
+}
+
+
+#chart {
+	margin-top: 100px;
+}
+
+.axis > path {
+	display: none;
+}
+
+svg {
+  font: 10px sans-serif;
+}
