@@ -6288,21 +6288,25 @@ header {
 .intro > h3 {
   line-height: 1.5; }
 
-.intro > h3 > a {
-  background-color: #7fcdbb;
-  color: #414042; }
-
 /*
  ___  __   __  ___  ___  __  
 |__  /  \ /  \  |  |__  |__) 
 |    \__/ \__/  |  |___ |  \ 
 */
+footer {
+  margin-top: 50px; }
+
 body {
   background-color: #f2f2f2; }
 
 .description {
   margin-top: 30px;
   margin-bottom: 20px; }
+
+a {
+  background-color: #7fcdbb;
+  color: #414042;
+  text-decoration: underline; }
 
 div.tooltip {
   z-index: 100;
@@ -6346,9 +6350,6 @@ text.axis-workweek {
 
 text.axis-worktime {
   fill: #000; }
-
-#chart {
-  margin-top: 100px; }
 
 .axis > path {
   display: none; }
