@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inaugural – A visualization</title>
+	<link rel="stylesheet" href="/index.css">
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center header-container">
+				<h1><span>Inaugural</span></h1>
+				<h3>A visual exploration of presidential inauguration addresses from 1789 to 2009</h3>
+			</div>
+			<div class="col-lg-8 header-content-container">
+				<h5>The presidential addresses set the tone for the new administration of the republic. This is a visual exploration of the words, concepts and ideas that are discussed, disected by their frequency across fifty-six presidencies.
+				The visualizations seek to discover trends in tone and ideas across time, both positive and negative, and to reveal hidden messages embedded in the narratives. <a id="methods-anchor" href="#methods">How was this created?</a></h5>
+			</div>
+			<div id="speeches-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+			  <div class="modal-dialog modal-lg" role="document">
+			    <div class="modal-content">
+			    	<div class="modal-body">
+			    		<div class="row">
+			    			<div id="modal-chart-container" class="col-lg-5 col-md-12 col-sm-12"></div>
+			    			<h6 id="speech-container" class="col-lg-7 col-md-12 col-sm-12"></h6>
+			    		</div>
+			    	</div>
+			      
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6 section">
+				<h3 class="title">Concepts and frequency</h3>
+				<p>This chart explores six different concepts that range from positive to negative connotations.
+				The concepts are a cluster of <i>cognitive synonyms</i>, formally known as
+				<a href="https://wordnet.princeton.edu/" target= "_blank">synsets</a>. These synonyms are displayed under each concept.</br></br>
+				Each line shows the minimum and maximum mentions of the concept. Hover over any line for more information.
+				</p>
+			</div>
+			<div class="col-lg-4 col-lg-offset-2">
+				<!-- <h4 class="key">How to read?</h4> -->
+			</div>
+		</div>
+		<div class="row">
+			<div id='concept-list' class="concept-list col-lg-12"></div>
+			<div id="stats-container" class="col-lg-12 section"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<h3 class="title">Positive and negative concepts across time</h3>
+				<p>The concepts are proxies of the tone and content of every speech. By visualizing them across time
+				it is possible to see the differences between every presidency and to reflec on the historical context
+				of each inauguration. Click on any graphic for more detail.
+				</p>
+			</div>
+			<div class="col-lg-4 col-lg-offset-2">
+				<h4 class="key">How to read?</h4>
+				<object type="image/svg+xml" data="../assets/data/concept_svg.svg"></object>
+			</div>
+			<div id="multiples-container" class="col-lg-12 section"></div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<h4 class="title">About the data and methods</h4>
+			</div>
+			<div id="methods" class="col-lg-8">
+				<p>The data was obtained from the <a href="http://www.nltk.org/howto/corpus.html" target= "_blank">NLTK Python Package</a> corpus database. Additionally, using the same library and <a href="http://www.nltk.org/howto/wordnet.html" target="_blank">NLTK's WordNet Synset Interface</a> it was possible to come up with a a group of cognitive synonyms for every concept. Then frequencies were obtained and normalized according to the lenght of every speech.</p>
+				</br>
+				<p>The data was further cleaned and prepared in R and then visualized using d3.js</p>
+				</br>
+				<p>This project was created by <a href="http://antonio-solano.com/">Antonio Solano</a> for the Studio II course, at the <a href="http://www.northeastern.edu/visualization/">Masters in Information Design and Visualization</a> at Northeastern University.</p>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="assets/Stats.js"></script>
+	<script src="assets/Request.js"></script>
+	<script src="assets/Polar.js"></script>
+	<script src="assets/PolarDetail.js"></script>
+	<script src="app.js"></script>
+
+</body>
+</html>
